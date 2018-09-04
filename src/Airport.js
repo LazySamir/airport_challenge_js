@@ -6,6 +6,10 @@ Airport.prototype.land = function(plane) {
   return plane
 };
 
+Airport.prototype.takeOff = function(plane) {
+  return `${plane} has left the airport`
+};
+
 // function Player() {
 // }
 // Player.prototype.play = function(song) {
