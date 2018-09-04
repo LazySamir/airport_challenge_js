@@ -1,5 +1,5 @@
 function Airport() {
-
+  weather = new Weather();
 };
 
 Airport.prototype.land = function(plane) {
@@ -7,7 +7,12 @@ Airport.prototype.land = function(plane) {
 };
 
 Airport.prototype.takeOff = function(plane) {
-  return `${plane} has left the airport`
+  if (weather.report() === 'clear') {
+    return `${plane} has left the airport`
+  } 
+  else {
+    return "Can't take off"
+  }
 };
 
 // function Player() {

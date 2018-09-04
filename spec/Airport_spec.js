@@ -17,8 +17,10 @@ describe ('Airport', function() {
 
   describe (".takeOff", function() {
     it("confirms plane departure", function() {
+      spyOn(Math, 'random').and.returnValue(0.1);
       airport.land(plane)
       expect(airport.takeOff(plane)).toEqual(`${plane} has left the airport`)
     });
   });
+
 });
