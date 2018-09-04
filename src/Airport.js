@@ -3,13 +3,18 @@ function Airport() {
 };
 
 Airport.prototype.land = function(plane) {
-  return plane
+  if (weather.report() === 'clear') {
+    return plane
+  }
+  else {
+    return "Can't land"
+  }
 };
 
 Airport.prototype.takeOff = function(plane) {
   if (weather.report() === 'clear') {
     return `${plane} has left the airport`
-  } 
+  }
   else {
     return "Can't take off"
   }
